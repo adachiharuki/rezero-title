@@ -22,3 +22,6 @@ def rezero():
         return latest
     else:
         return "❌ タイトル形式不明", 500
+    
+
+    
