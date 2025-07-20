@@ -26,11 +26,9 @@ jobs:
       run: python scrape.py
 
     - name: Commit and push
-    run: |
-      git config user.name "github-actions"
-      git config user.email "github-actions@github.com"
-      git add latest.txt
-      git commit -m "Update latest title" || exit 0
-      git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
-
-
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git add latest.txt
+        git commit -m "Update latest title" || exit 0
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
